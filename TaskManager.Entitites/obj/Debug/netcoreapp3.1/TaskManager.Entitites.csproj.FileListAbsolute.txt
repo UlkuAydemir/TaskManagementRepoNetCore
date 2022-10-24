@@ -1,0 +1,10 @@
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\bin\Debug\netcoreapp3.1\TaskManager.Entitites.deps.json
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\bin\Debug\netcoreapp3.1\TaskManager.Entitites.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\bin\Debug\netcoreapp3.1\TaskManager.Entitites.pdb
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\obj\Debug\netcoreapp3.1\TaskManager.Entitites.csproj.AssemblyReference.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\obj\Debug\netcoreapp3.1\TaskManager.Entitites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\obj\Debug\netcoreapp3.1\TaskManager.Entitites.AssemblyInfoInputs.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\obj\Debug\netcoreapp3.1\TaskManager.Entitites.AssemblyInfo.cs
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\obj\Debug\netcoreapp3.1\TaskManager.Entitites.csproj.CoreCompileInputs.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\obj\Debug\netcoreapp3.1\TaskManager.Entitites.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.Entitites\obj\Debug\netcoreapp3.1\TaskManager.Entitites.pdb

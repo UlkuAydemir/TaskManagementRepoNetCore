@@ -1,0 +1,15 @@
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\bin\Debug\netcoreapp3.1\TaskManager.Business.deps.json
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\bin\Debug\netcoreapp3.1\TaskManager.Business.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\bin\Debug\netcoreapp3.1\TaskManager.Business.pdb
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\bin\Debug\netcoreapp3.1\TaskManager.DataAccess.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\bin\Debug\netcoreapp3.1\TaskManager.Entitites.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\bin\Debug\netcoreapp3.1\TaskManager.DataAccess.pdb
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\bin\Debug\netcoreapp3.1\TaskManager.Entitites.pdb
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.csproj.AssemblyReference.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.AssemblyInfoInputs.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.AssemblyInfo.cs
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.csproj.CoreCompileInputs.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.csproj.CopyComplete
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.Business\obj\Debug\netcoreapp3.1\TaskManager.Business.pdb

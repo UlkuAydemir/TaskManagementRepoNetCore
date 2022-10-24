@@ -1,0 +1,16 @@
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\bin\Debug\netcoreapp3.1\TaskManager.DataAccess.deps.json
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\bin\Debug\netcoreapp3.1\TaskManager.DataAccess.runtimeconfig.json
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\bin\Debug\netcoreapp3.1\TaskManager.DataAccess.runtimeconfig.dev.json
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\bin\Debug\netcoreapp3.1\TaskManager.DataAccess.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\bin\Debug\netcoreapp3.1\TaskManager.DataAccess.pdb
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\bin\Debug\netcoreapp3.1\TaskManager.Entitites.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\bin\Debug\netcoreapp3.1\TaskManager.Entitites.pdb
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.csproj.AssemblyReference.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.AssemblyInfoInputs.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.AssemblyInfo.cs
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.csproj.CopyComplete
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.dll
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.pdb
+C:\Users\90539\source\repos\TaskManager\TaskManager.DataAccess\obj\Debug\netcoreapp3.1\TaskManager.DataAccess.genruntimeconfig.cache
