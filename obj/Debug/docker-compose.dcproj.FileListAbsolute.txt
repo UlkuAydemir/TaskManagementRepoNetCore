@@ -32,3 +32,7 @@ C:\Users\90539\source\repos\TaskManager\bin\Debug\TaskManager.Entitites.pdb
 C:\Users\90539\source\repos\TaskManager\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\90539\source\repos\TaskManager\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\90539\source\repos\TaskManager\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\90539\source\repos\TaskManager\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\90539\source\repos\TaskManager\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\90539\source\repos\TaskManager\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\90539\source\repos\TaskManager\bin\Debug\Microsoft.OpenApi.dll

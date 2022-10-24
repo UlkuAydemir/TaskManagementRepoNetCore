@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TaskManager.Business.Abstract;
 using TaskManager.DataAccess.Abstract;
 using TaskManager.DataAccess.Concrete;
@@ -15,10 +16,10 @@ namespace TaskManager.Business.Concrete
         {
             _taskRepository = taskRepository;
         }
-        public Task CreateTask(Task task)
+        public Task<Entitites.Task> CreateTaskAsync(Entitites.Task task)
         {
             task.CreateTime = DateTime.Now;
-            return _taskRepository.CreateTask(task);
+            return _taskRepository.CreateTaskAsync(task);
         }
 
         public void DeleteTask(int id)
@@ -26,17 +27,17 @@ namespace TaskManager.Business.Concrete
             _taskRepository.DeleteTask(id);
         }
 
-        public List<Task> GetAllTasks()
+        public Task<List<Entitites.Task>> GetAllTasksAsync()
         {
-            return _taskRepository.GetAllTasks();
+            return _taskRepository.GetAllTasksAsync();
         }
 
-        public Task GetTaskById(int id)
+        public Entitites.Task GetTaskById(int id)
         {
             return _taskRepository.GetTaskById(id);
         }
 
-        public Task UpdateTask(Task task)
+        public Entitites.Task UpdateTask(Entitites.Task task)
         {
             return _taskRepository.UpdateTask(task);
         }

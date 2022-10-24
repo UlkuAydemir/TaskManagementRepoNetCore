@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TaskManager.Entitites;
 
 namespace TaskManager.DataAccess.Abstract
 {
     public interface ITaskRepository
     {
-        List<Task> GetAllTasks();
+        Task<List<Entitites.Task>> GetAllTasksAsync();
 
-        Task GetTaskById(int id);
+        Entitites.Task GetTaskById(int id);
 
-        Task CreateTask(Task task);
+        Task<Entitites.Task> CreateTaskAsync(Entitites.Task task);
 
-        Task UpdateTask(Task task);
+        Entitites.Task UpdateTask(Entitites.Task task);
 
         void DeleteTask(int id);
 

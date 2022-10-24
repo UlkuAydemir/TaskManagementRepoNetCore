@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using TaskManager.DataAccess.Abstract;
 using TaskManager.Entitites;
 
@@ -9,12 +11,12 @@ namespace TaskManager.DataAccess.Concrete
 {
     public class TaskRepository : ITaskRepository
     {
-        public Task CreateTask(Task task)
+        public async Task<Entitites.Task> CreateTaskAsync(Entitites.Task task)
         {
             using (var taskDbContext = new TaskDbContext())
             {
                 taskDbContext.Tasks.Add(task);
-                taskDbContext.SaveChanges();
+                await taskDbContext.SaveChangesAsync();
                 return task;
             }
         }
@@ -29,7 +31,7 @@ namespace TaskManager.DataAccess.Concrete
             }
         }
 
-        public Task GetTaskById(int id)
+        public Entitites.Task GetTaskById(int id)
         {
             using (var taskDbContext = new TaskDbContext())
             {
@@ -37,15 +39,15 @@ namespace TaskManager.DataAccess.Concrete
             }
         }
 
-        public List<Task> GetAllTasks()
+        public async Task<List<Entitites.Task>> GetAllTasksAsync()
         {
             using (var taskDbContext = new TaskDbContext())
             {
-                return taskDbContext.Tasks.ToList();
+                return await taskDbContext.Tasks.ToListAsync();
             }
         }
 
-        public Task UpdateTask(Task task)
+        public Entitites.Task UpdateTask(Entitites.Task task)
         {
             using (var taskDbContext = new TaskDbContext())
             {

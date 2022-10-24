@@ -31,12 +31,23 @@ namespace TaskManager.API3
         string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public void ConfigureServices(IServiceCollection services)
         {
-            
+
 
             services.AddControllers();
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo {
+                    
+                    Version="v1",
+                    Title= "My API",
+                    Description = "TaskManager ASP.NET Core"
+                
+                });
+            });
+
             services.AddSingleton<ITaskService, Business.Concrete.TaskManager>();
-            services.AddSingleton<ITaskRepository, TaskRepository>();
             services.AddDbContext<TaskDbContext>();
+            services.AddSingleton<ITaskRepository, TaskRepository>();
+  
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -56,6 +67,12 @@ namespace TaskManager.API3
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI( c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json","TaskManagerAPI");
+                
+            });
 
             app.UseRouting();
 

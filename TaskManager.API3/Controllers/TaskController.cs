@@ -23,9 +23,16 @@ namespace TaskManager.API3.Controllers
 
         [HttpGet]
         [EnableCors("_myAllowSpecificOrigins")]
-        public List<Entitites.Task> Get()
+        public async Task<IActionResult> Get()
         {
-            return _taskService.GetAllTasks();
+            var result = await _taskService.GetAllTasksAsync();
+
+            if (result.Count == 0)
+            {
+                return NoContent();
+            }
+
+            return Ok(result);
 
         }
 
@@ -54,9 +61,9 @@ namespace TaskManager.API3.Controllers
 
         [HttpPost]
         [EnableCors("_myAllowSpecificOrigins")]
-        public Entitites.Task Create(Entitites.Task task)
+        public Task<Entitites.Task> Create(Entitites.Task task)
         {
-            return _taskService.CreateTask(task);
+            return _taskService.CreateTaskAsync(task);
         }
     }
 }
