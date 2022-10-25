@@ -13,6 +13,7 @@ services:
       DB_HOST: taskmanagerdb
       DB_NAME: TaskDb
       DB_SA_PASSWORD: password@12345#
+      FrontendPort: http://localhost:3000
     image: taskmanagerapi3
     networks:
       taskmanagerapp: null
@@ -23,6 +24,22 @@ services:
     - mode: ingress
       target: 80
       published: "8001"
+      protocol: tcp
+  taskmanager.frontend:
+    build:
+      context: C:\Users\90539\source\repos\TaskManager
+      dockerfile: taskmanagerapp2\Dockerfile
+    container_name: taskmanager-frontend
+    depends_on:
+      taskmanager.api3:
+        condition: service_started
+    image: taskmanagerapp2
+    networks:
+      taskmanagerapp: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "3001"
       protocol: tcp
   taskmanagerdb:
     container_name: app-db

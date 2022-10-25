@@ -23,6 +23,7 @@ services:
       DB_NAME: TaskDb
       DB_SA_PASSWORD: password@12345#
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      FrontendPort: http://localhost:3000
       NUGET_FALLBACK_PACKAGES: ""
     image: taskmanagerapi3:dev
     labels:
@@ -76,6 +77,22 @@ services:
       read_only: true
       bind:
         create_host_path: true
+  taskmanager.frontend:
+    build:
+      context: C:\Users\90539\source\repos\TaskManager
+      dockerfile: taskmanagerapp2\Dockerfile
+    container_name: taskmanager-frontend
+    depends_on:
+      taskmanager.api3:
+        condition: service_started
+    image: taskmanagerapp2
+    networks:
+      taskmanagerapp: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "3001"
+      protocol: tcp
   taskmanagerdb:
     container_name: app-db
     environment:

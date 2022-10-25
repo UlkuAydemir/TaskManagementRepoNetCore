@@ -1,0 +1,18 @@
+name: dockercompose12260132584734634476
+services:
+  taskmanager.api3:
+    build:
+      context: C:\Users\90539\source\repos\TaskManager
+      dockerfile: TaskManager.API3/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: taskmanagerapi3
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose12260132584734634476_default

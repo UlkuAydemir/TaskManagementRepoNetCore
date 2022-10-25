@@ -1,0 +1,59 @@
+name: dockercompose12260132584734634476
+services:
+  taskmanager.api3:
+    build:
+      context: C:\Users\90539\source\repos\TaskManager
+      dockerfile: TaskManager.API3\Dockerfile
+    container_name: taskmanager-api
+    depends_on:
+      taskmanagerdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_HOST: taskmanagerdb
+      DB_NAME: TaskDb
+      DB_SA_PASSWORD: password@12345#
+      FrontendPort: http://localhost:3000
+    image: taskmanagerapi3
+    networks:
+      taskmanagerapp: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "8001"
+      protocol: tcp
+  taskmanager.frontend:
+    build:
+      context: C:\Users\90539\source\repos\TaskManager
+      dockerfile: Taskmanager.Frontend\Dockerfile
+    container_name: taskmanager-frontend
+    depends_on:
+      taskmanager.api3:
+        condition: service_started
+    networks:
+      taskmanagerapp: null
+    ports:
+    - mode: ingress
+      target: 3000
+      published: "3001"
+      protocol: tcp
+  taskmanagerdb:
+    container_name: taskmanager-db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Express
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      taskmanagerapp: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "8002"
+      protocol: tcp
+networks:
+  taskmanagerapp:
+    name: dockercompose12260132584734634476_taskmanagerapp

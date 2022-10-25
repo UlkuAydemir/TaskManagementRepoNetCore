@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>2e57edfc-afad-4b1e-a1b5-1792219f4b41</ProjectGuid>
+    <ProjectGuid>484b0787-25cb-4c73-8f2b-8d9c0e79db89</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api</DockerServiceUrl>
     <DockerServiceName>taskmanager.api3</DockerServiceName>

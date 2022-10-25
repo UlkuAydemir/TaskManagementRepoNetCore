@@ -1,0 +1,114 @@
+name: dockercompose12260132584734634476
+services:
+  taskmanager.api3:
+    build:
+      context: C:\Users\90539\source\repos\TaskManager
+      dockerfile: TaskManager.API3\Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: TaskManager.API3
+      target: base
+    container_name: taskmanager-api
+    depends_on:
+      taskmanagerdb:
+        condition: service_started
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DB_HOST: taskmanagerdb
+      DB_NAME: TaskDb
+      DB_SA_PASSWORD: password@12345#
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      FrontendPort: http://localhost:3000
+      NUGET_FALLBACK_PACKAGES: ""
+    image: taskmanagerapi3:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/TaskManager.API3.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      taskmanagerapp: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "8001"
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\90539\source\repos\TaskManager\TaskManager.API3
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\90539\source\repos\TaskManager
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\90539\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\90539\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\90539\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\90539\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  taskmanager.frontend:
+    build:
+      context: C:\Users\90539\source\repos\TaskManager
+      dockerfile: taskmanager.frontend\Dockerfile
+    container_name: taskmanager-frontend
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 3000
+      published: "3000"
+      protocol: tcp
+    volumes:
+    - type: volume
+      target: ../app
+      volume: {}
+  taskmanagerdb:
+    container_name: taskmanager-db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Express
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+      taskmanagerapp: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "8002"
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose12260132584734634476_default
+  taskmanagerapp:
+    name: dockercompose12260132584734634476_taskmanagerapp
