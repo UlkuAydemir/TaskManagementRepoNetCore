@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.6'
 
 networks:
     taskmanagerapp:
@@ -35,6 +35,7 @@ services:
         - taskmanagerapp
   taskmanager.frontend:
     container_name: taskmanager-frontend001
+    image: frontendversion002
     build:
         context: ./taskmanager.frontend
         dockerfile: Dockerfile
@@ -43,8 +44,7 @@ services:
     volumes:
       - /app/node_modules
     ports:
-        - 3000:3000
-   
+        - 3000:3000 
     environment:
       - CHOKIDAR_USEPOLLING=true
     depends_on:

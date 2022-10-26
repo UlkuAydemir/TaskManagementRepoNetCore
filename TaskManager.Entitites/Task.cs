@@ -18,5 +18,7 @@ namespace TaskManager.Entitites
         public DateTime EndTime { get; set; }
         public bool IsCompleted { get; set; }
 
+        public int TaskStatus { get; set; }
+
     }
 }

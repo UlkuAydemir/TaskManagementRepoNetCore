@@ -53,7 +53,7 @@ namespace TaskManager.API3
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   policy =>
                                   {
-                                      policy.WithOrigins(Environment.GetEnvironmentVariable("FrontendPort"))
+                                      policy.WithOrigins(Environment.GetEnvironmentVariable(("FrontendPort")), "http://localhost:3001")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod();
                                   });
