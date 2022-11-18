@@ -7,7 +7,7 @@ Each application working different container.
 
 --React-Redux frontend application
 
---Mssql database
+--Mssql database; Entityframe work code first, migration.
 
 --DockerCompose
 
